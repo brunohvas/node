@@ -3,10 +3,6 @@ const mongoose = require("mongoose")
 const { Schema } = mongoose
 
 const taskSchema = new Schema({
-    id: {
-        type: Number,
-        required: true
-    },
     name: {
         type: String,
         required: true
@@ -19,7 +15,7 @@ const taskSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
+    status: {
         type: String,
         required: true
     }
@@ -27,6 +23,6 @@ const taskSchema = new Schema({
     { timestamps: true }
 )
 
-const Task =  mongoose.model("Task", taskSchema)
+const Task = mongoose.model("Task", taskSchema)
 
 module.exports = Task

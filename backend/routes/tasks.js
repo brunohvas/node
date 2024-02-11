@@ -10,5 +10,8 @@ router
 router
     .route("/tasks/:id")
     .get((req, res) => taskController.getTask(req, res))
+    .delete((req, res) => taskController.delete(req, res))
+    .put((req, res) => taskController.update(req, res))
+
 
 module.exports = router
